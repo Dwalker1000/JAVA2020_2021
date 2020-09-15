@@ -5,11 +5,11 @@ public class Exersize7 {
         victory();
         back();
         victory();
-        front();
+        back();
         victory();
         back();
         victory();
-        front();
+        back();
         victory();
         back();
 
