@@ -1,7 +1,14 @@
 public class ForloopPractice {
+    public static final int SIZE=7; //static constant (final makes it so you cant change it)
     public static void main(String [] args){
-        for (int counter = 0; counter <=10; counter++){
-            System.out.println(counter);
+        System.out.println("+----+");
+        for (int i = 1; i <= SIZE; i++) {
+            line();
         }
+        System.out.println("+----+");
+    }
+    public static void line(){
+            System.out.println("\\    /");
+            System.out.println("/    \\");
     }
 }
