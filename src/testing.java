@@ -1,13 +1,14 @@
 public class testing {
-    public static void main(String[] args){
-        int max;
-        int min = 10;
-        max = 17-4 / 10;
-        max = max + 6;
-        min = max - min;
-        System.out.println(max * 2);
-        System.out.println(max + min);
-        System.out.println(max);
-        System.out.println(min);
-    }
+public static final int MAX = 5;
+        public static void unknown() {
+        int number = 0;
+        for (int count = MAX; count >= 1; count--) {
+            number += (count * count);
+            }
+        System.out.println("The result is: " + number);
+        }
+
+        public static void main(String[] args) {
+        unknown();
+        }
 }
