@@ -1,6 +1,11 @@
+import java.util.Scanner;
 public class SizeableRocket {
-    public static final int SIZE = 5;
+    public static int SIZE = 8;
     public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("how big do you want the rocket to be");
+        SIZE = input.nextInt();
+        System.out.println("your Size is " + SIZE);
 
         for (int line=1; line< SIZE; line++) {
             space(line);

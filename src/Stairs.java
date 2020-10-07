@@ -1,6 +1,11 @@
+import java.util.Scanner;
 public class Stairs {
-    public static final int SIZE = 5;
+    public static int SIZE;
     public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("how many stairs do you want");
+        SIZE = input.nextInt();
+        System.out.println("your Size is " + SIZE);
         for (int line = 0; line < SIZE; line++) {
             for (int spc = 1; spc <= 1; spc++){
                 for (int ln = 1; ln<=5; ln++) {
