@@ -91,7 +91,7 @@ public class Chapter3Exercises {
         System.out.println();
     }
     public static void largerAbsVal2 (int x, int y){
-        int larger = Math.max(Math.abs(x), Math.abs(y));//had to look up how to do math
+        int larger = Math.max(Math.abs(x), Math.abs(y));
         System.out.println(larger);
     }
     public static void largerAbsVal3 (int x, int y, int z){
