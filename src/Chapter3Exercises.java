@@ -1,43 +1,58 @@
 import java.util.Scanner;
 public class Chapter3Exercises {
     public static void main(String[] args) {
+        //n1
         printNumbers(10);
         printNumbers(5);
         System.out.println();
+        //n2
         printPowers2(10);
         printPowers2(5);
         System.out.println();
+        //n3
         printPowersOfX(5, 5);
         printPowersOfX(10, 5);
         System.out.println();
+        //n4
         printSquare(1, 5);
         printSquare(3, 8);
+        //n5
         printGrid( 5,5);
         printGrid(4,6);
+        //n6
         largerAbsVal2(11,-22);
         largerAbsVal2(-5, 7);
         System.out.println();
+        //n7
         largerAbsVal3(-7, -9, 16);
         largerAbsVal3(8, 3, -7);
         System.out.println();
+        //n8
         quadratic(1,-7,12);
         quadratic(2,6,8);
         System.out.println();
+        //n9
         distance(10,2,3,5);
         distance(1,0,4,4);
         System.out.println();
+        //n10
         scientific(6.23, 5);
         scientific(1.9,-2);
         System.out.println();
+        //n11
         padString("strings", 10);
         padString("Loops", 5);
         System.out.println();
+        //n12
         vertical("hey now");
         System.out.println();
+        //n13
         printReverse("hello there!");
         System.out.println();
+        //n14
         inputBirthday();
         System.out.println();
+        //n15
         processName();
     }
 
