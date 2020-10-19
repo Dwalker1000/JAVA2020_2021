@@ -14,7 +14,7 @@ public class ReturnMethods {
         int x2 = scan.nextInt();
         int y2 = scan.nextInt();
         double distance = distanceMethod(x1,x2,y1,y2);//my method has to be of type double
-        System.out.println(("The double distance is " + distance));
+        System.out.printf("The double distance is %.2f \n3",distance);
     }
     //this is a return method
     public static double distanceMethod(int X1, int X2,int Y1,int Y2){
