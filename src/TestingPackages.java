@@ -32,16 +32,16 @@ public class TestingPackages {
 //        String lastName = formalName.substring(0,indexOfComa);
 //        String firstName = formalName.substring(indexOfComa+2);
 //        System.out.println("my name is " + firstName +" " +lastName);
-        Scanner input = new Scanner(System.in);
+//        Scanner input = new Scanner(System.in);
 //        System.out.println("Enter you name: ");
 //        String name =input.next(); //takes only one word
 //        System.out.println(name);
 //        name = input.nextLine();
-        System.out.println("Enter you name: ");
-        String name =input.nextLine(); //will take anything untill you press enter
-        System.out.println(name);
-        System.out.println("How many games do you want to play");
-        int games = input.nextInt();
-        System.out.println("your number is " + games);
+//        System.out.println("Enter you name: ");
+//        String name =input.nextLine(); //will take anything untill you press enter
+//        System.out.println(name);
+//        System.out.println("How many games do you want to play");
+//        int games = input.nextInt();
+//        System.out.println("your number is " + games);
     }
 }
