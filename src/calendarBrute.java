@@ -3,15 +3,22 @@ import java.util.*;
 public class calendarBrute {
     public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    System.out.println("how many days are in the month (28-31) ");
-    int days = scan.nextInt();
-    System.out.println("date of the first sunday (1-7) ");
-    int Sun = scan.nextInt();
-    dayName();
-    topbot();
-    System.out.println();
-    date(days, Sun);
-    topbot();
+        String answer;
+        do {
+            System.out.println("how many days are in the month (28-31) ");
+            int days = scan.nextInt();
+            System.out.println("date of the first sunday (1-7) ");
+            int Sun = scan.nextInt();
+            dayName();
+            topbot();
+            System.out.println();
+            date(days, Sun);
+            topbot();
+            System.out.println();
+            System.out.println("do you want to create another calendar (yes or no)");
+            answer = scan.next();
+        }
+        while (answer.equalsIgnoreCase("yes"));
 }
 
     public static void dayName() {
