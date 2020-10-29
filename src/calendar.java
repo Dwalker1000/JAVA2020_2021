@@ -35,6 +35,8 @@ public class calendar {
                 if (num <= days)
                     System.out.print(padded(num,4));
                     System.out.print("  ");
+                if (num >= days+1)
+                    System.out.print("    ");
                 if (num == days+1)
                     num = 0;
                     System.out.print("");
