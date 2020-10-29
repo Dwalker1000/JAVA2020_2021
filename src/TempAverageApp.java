@@ -8,19 +8,32 @@ public class TempAverageApp {
         System.out.println("what do you want the lowest temp to be");
         int low = scan.nextInt();
         System.out.println("what do you want the highest temp to be (must be higher than the lowest temp)");
-        int high = scan.nextInt();;
+        int high = scan.nextInt();
         int sum = 0;
         int [] temps = new int [30];
-        for (int x = 0; x <temps.length-2; x++){
+        //adds to first array
+        for (int x = 0; x <temps.length-1; x++){
             int result = random.nextInt(high-low) + low;
             temps [x]+= result;
             sum += temps[x];
         }
+        sum -= temps[0];
+        //gets user temp
         System.out.println("what do you want the temp on day 30 to be (most accurate if its in between the lowest and highest)");
         int usertemp = scan.nextInt();
-        temps [temps.length-1]+= usertemp;
-        System.out.println(Arrays.toString(temps));
+
+        //adds user temp to the last poss
+        int [] temp = new int [temps.length];
+        for (int i = 0; i<= temps.length-2; i++)
+            temp[i] = temps[i+1];
+        temp [temp.length-1] += usertemp;
+        System.out.println(temp.length);
+        sum += usertemp;
+
+        //prints arrays
+        System.out.println(Arrays.toString(temp));
         System.out.println();
+
         //finds average
         double average = sum/temps.length;
         System.out.println("the average temp is " + average + " " +type);
