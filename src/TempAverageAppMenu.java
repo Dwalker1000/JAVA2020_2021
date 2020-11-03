@@ -27,10 +27,14 @@ public class TempAverageAppMenu {
                     System.out.println("your string is " + Arrays.toString(temps));
                     break;
                 case 2:
-                    second();
+                    average();
                     break;
                 case 3:
+                    below();
+                    break;
                 case 4:
+                    above();
+                    break;
                 case 5:
                 case 6:
                     rep = "no";
@@ -48,12 +52,41 @@ public class TempAverageAppMenu {
             sum += temps[x];
         }
     }
-    public static void second(){
+    public static void average(){
         average = sum/temps.length;
         System.out.println("the average temp is " + average);
         System.out.println();
     }
-
+    public static void below(){
+        int counter2 = 0;
+        for (int i=0;i < temps.length;i++) {
+            if (temps[i] < average) {
+                counter2++;
+            }
+            System.out.println("there are " + counter2 + " days above the average temp");
+        }
+    }
+    public static void above(){
+        int counter = 0;
+        for (int i=0;i < temps.length;i++) {
+            if (temps[i] > average) {
+                counter++;
+            }
+        }
+        System.out.println("there are " + counter + " days above the average temp");
+    }
+    public static void newTemp(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("what do you want the temp on day 30 to be (the closer to the average the more accurate it will be)");
+        int [] temp = new int [temps.length];
+        int usertemp = scan.nextInt();
+        for (int i = 0; i< temps.length-1; i++) {
+            temp[i] = temps[i + 1];
+        }
+        temp [temp.length-1] += usertemp;
+        System.out.println(temp.length);
+        sum += usertemp;
+    }
     public static void refrence(){
         Scanner scan = new Scanner(System.in);
         Random random = new Random();
@@ -73,14 +106,15 @@ public class TempAverageAppMenu {
         }
         sum -= temps[0];
         //gets user temp
-        System.out.println("what do you want the temp on day 30 to be (most accurate if its in between the lowest and highest)");
+        System.out.println("what do you want the temp on day 30 to be (the closer to the average the more accurate it will be)");
         int usertemp = scan.nextInt();
 
         //adds user temp to the last poss
         System.out.println(" ");
         int [] temp = new int [temps.length];
-        for (int i = 0; i<= temps.length-2; i++)
-            temp[i] = temps[i+1];
+        for (int i = 0; i< temps.length-1; i++) {
+            temp[i] = temps[i + 1];
+        }
         temp [temp.length-1] += usertemp;
         System.out.println(temp.length);
         sum += usertemp;
@@ -103,7 +137,7 @@ public class TempAverageAppMenu {
         }
         System.out.println("there are "+counter+" days above the average temp");
 
-        //finds amount of days below the avrage
+        //finds amount of days below the average
         for (int i=0;i < temps.length;i++) {
             if (temps[i] < average) {
                 counter2++;
