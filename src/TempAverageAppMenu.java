@@ -14,29 +14,37 @@ public class TempAverageAppMenu {
             System.out.println("*               menu              *");
             System.out.println("*                                 *");
             System.out.println("* 1. Input 30 days temp           *");
-            System.out.println("* 2. calculate average            *");
-            System.out.println("* 3. how many days below average  *");
+            System.out.println("* 2. Random input temps           *");
+            System.out.println("* 3. calculate average            *");
             System.out.println("* 4. how many days below average  *");
-            System.out.println("* 5. input new temp               *");
-            System.out.println("* 6. exit                         *");
+            System.out.println("* 5. how many days above average  *");
+            System.out.println("* 6. input new temp               *");
+            System.out.println("* 7. exit                         *");
             System.out.println("***********************************");
             int answer = scan.nextInt();
             switch (answer) {
                 case 1:
                     first();
-                    System.out.println("your string is " + Arrays.toString(temps));
+                    System.out.println("your temps are " + Arrays.toString(temps));
                     break;
                 case 2:
-                    average();
+                    randome();
+                    System.out.println("your temps are " + Arrays.toString(temps));
                     break;
                 case 3:
-                    below();
+                    average();
                     break;
                 case 4:
-                    above();
+                    below();
                     break;
                 case 5:
+                    above();
+                    break;
                 case 6:
+                    newTemp();
+                    System.out.println("your temps are " + Arrays.toString(temps));
+                    break;
+                case 7:
                     rep = "no";
                 default:
 
@@ -44,11 +52,26 @@ public class TempAverageAppMenu {
         } while (rep == "yes");
     }
     public static void first(){
+        sum = 0;
         Scanner scan = new Scanner(System.in);
-        for (int x = 0; x <= temps.length-1; x++) {
+        for (int x = 1; x <= temps.length-1; x++) {
             System.out.println("What do you want the " + x + " day to be");
             int input = scan.nextInt();
             temps [x] += input;
+            sum += temps[x];
+        }
+    }
+    public static void randome(){
+        Scanner scan = new Scanner(System.in);
+        Random random = new Random();
+        System.out.println("what do you want the lowest temp to be");
+        int low = scan.nextInt();
+        System.out.println("what do you want the highest temp to be (must be higher than the lowest temp)");
+        int high = scan.nextInt();
+        sum = 0;
+        for (int x = 0; x <temps.length-1; x++){
+            int result = random.nextInt(high-low) + low;
+            temps [x]+= result;
             sum += temps[x];
         }
     }
@@ -63,8 +86,8 @@ public class TempAverageAppMenu {
             if (temps[i] < average) {
                 counter2++;
             }
-            System.out.println("there are " + counter2 + " days above the average temp");
         }
+        System.out.println("there are " + counter2 + " days below the average temp");
     }
     public static void above(){
         int counter = 0;
@@ -84,7 +107,6 @@ public class TempAverageAppMenu {
             temp[i] = temps[i + 1];
         }
         temp [temp.length-1] += usertemp;
-        System.out.println(temp.length);
         sum += usertemp;
     }
     public static void refrence(){
