@@ -30,6 +30,5 @@ public class TimeSpan {
     }
     public void scale(int factor){
         totalMinutes *= factor;
-        totalMinutes /= factor;
     }
 }
