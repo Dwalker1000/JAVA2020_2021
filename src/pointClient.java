@@ -1,12 +1,22 @@
+// A program that deals with points.
+// Fourth version, to accompany encapsulated Point class.
 public class pointClient {
-    public static void main(String[]args){
-        point p1 = new point(); //new  keyword to create object
-        point p2 = new point(3,2);
-        p2.SetY(5);
-//        System.out.println("the point is p1: (" + p1.GetX() + "," + p1.GetY()+ ")");
-//        System.out.println("the point is p2: (" + p2.GetX() + "," + p2.GetY()+ ")");
-        p1.setLocation(-5,6);
-//        System.out.println("the point is p1: (" + p1.GetX() + "," + p1.GetY()+ ")");
-        System.out.println(p1);
+    public static void main(String[] args) {
+    // create two Point objects
+    point p1 = new point(7, 2);
+    point p2 = new point(4, 3);
+    // print each point and its distance from the origin
+    System.out.println("p1 is " + p1);
+    System.out.println("distance from origin = " +
+    p1.distanceFromOrigin());
+    System.out.println("p2 is " + p2);
+    System.out.println("distance from origin = " +
+    p2.distanceFromOrigin());
+    // translate each point to a new location
+    p1.translate(11, 6);
+    p2.translate(1, 7);
+    // print the points again
+    System.out.println("p1 is " + p1);
+    System.out.println("p2 is " + p2);
     }
 }
