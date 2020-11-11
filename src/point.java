@@ -53,6 +53,7 @@ public class point {
         String main = "[x=" + x + ",y" + y + "]";
         return main;
     }
+    //hw
     public int manhattanDistance(int xtwo, int ytwo){
         int x1 = Math.abs(x);
         int y1 = Math.abs(y);
