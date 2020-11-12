@@ -1,8 +1,8 @@
 // A Point object represents a pair of (x, y) coordinates.
 // Fourth version: encapsulated.
 public class point {
-    private int x;
-    private int y;
+    public int x;
+    public int y;
     // constructs a new point at the origin, (0, 0)
     public point() {
         this(0, 0); // calls Point(int, int) constructor
@@ -50,7 +50,6 @@ public class point {
             int agrs = 0;
             throw new IllegalArgumentException("the second x var cannot be the same as the first x var");
         }
-
         double slope = (other.y - y) / (other.x / x);
         return slope;
     }
