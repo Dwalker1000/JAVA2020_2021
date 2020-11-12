@@ -20,7 +20,8 @@ public class line {
         return Line;
     }
     public double getSlope(){
-        double slope = (getp2().getY()-getp1().getY())/(getp2().getX()-getp1().getX());
+        double slope = (getp2().y-getp1().y)/(getp2().x-getp1().x);
+
         return slope;
     }
     public line(int x1, int y1, int x2, int y2){
@@ -28,7 +29,7 @@ public class line {
         point p2 = new point(x2,y2);
     }
     public boolean isCollinear(point p){
-        double slope1 = (getp2().getY()-getp1().getY())/(getp2().getX()-getp1().getX());
-        return slope1 == getSlope();
+        double line2slope = ((p.y-getp1().y)/(p.x-getp1().y));
+        return line2slope == getSlope();
     }
 }
