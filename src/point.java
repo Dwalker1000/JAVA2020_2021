@@ -27,11 +27,18 @@ public class point {
         return x;
     }
     public int getY() {
-    return y;
+        return y;
     }
-    public void setLocation(int x, int y) {
+    public void SetX(int x){
+        this.x = x;
+    }
+    public void SetY(int y){
+        this.y = y;
+    }
+    public void setLocation(int x, int y){
         this.x = x;
         this.y = y;
+        name = "this is the x" + x + "this is the y" + y;
     }
     public String toString() {
         return "(" + x + ", " + y + ")";
