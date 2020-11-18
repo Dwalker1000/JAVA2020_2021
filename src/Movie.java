@@ -62,12 +62,12 @@ public class Movie {
     public String[] getPG(){
         String[] MovieName = {"Jaws", "Infinity war", "The Croods", "The Grinch", "Iron Man"};
         String[] MovieRating = {"PG", "PG-13", "PG", "PG", "PG-13"};
-        String[] PgRating = {};
+        String[] PgRating = new String [MovieRating.length-1];
         int y = 0;
-        for (int i = 0; i<= MovieRating.length; i++){
+        for (int i = 0; i<= MovieRating.length-1; i++){
             String x = MovieRating[i];
             if (x == "PG"){
-                PgRating [y]= x;
+                PgRating [y]= MovieName[i];
                 y+=1;
             }
         }
@@ -84,10 +84,10 @@ public class Movie {
         String output = "";
         if (dif <= 0){
             dif = Math.abs(dif);
-            output = "the second movie is " + dif + " minutes longer han the first movie";
+            output = "the second movie is " + dif + " minutes longer than the first movie";
         }
         if (dif >= 0){
-            output = "the first movie is " + dif + " minutes longer than he second movie";
+            output = "the first movie is " + dif + " minutes longer than the second movie";
         }
         return output;
     }

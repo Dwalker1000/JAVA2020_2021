@@ -4,12 +4,10 @@ public class Holiday {
     private String Name;
     private int Day;
     private String Month;
-    Holiday Independence = new Holiday();
     public Holiday(){
         Name = "New Year";
         Day = 1;
         Month = "January";
-        Independence = new Holiday("Independence Day", 4, "July");
     }
     public Holiday(String NameIn, int DayIn, String MonthIn){
         Name = NameIn;
@@ -17,6 +15,10 @@ public class Holiday {
         Month = MonthIn;
     }
     //Name
+    public Holiday Independence(Holiday Independence){
+        Independence = new Holiday("Independence Day", 4, "July");
+        return Independence;
+    }
     public String GetName(){
         return Name;
     }
@@ -49,31 +51,31 @@ public class Holiday {
         return second.Month == Month;
     }
     public double AvgDate(){
-        List list=new ArrayList();
-        list.add(25);
-        list.add(26);
-        list.add(31);
-        list.add(7);
-        list.add(21);
+        int [] list = new int[5];
+        list[0] = 25;
+        list[1] = 26;
+        list[2] = 31;
+        list[3] = 7;
+        list[4] = 21;
         double count = 0;
-        for (int i = 1; i <= list.size(); i++){
-            count += list.indexOf(i);
+        for (int i = 0; i <= list.length-1; i++){
+            count += list[i];
         }
-        count = count/list.size();
+        count = count/list.length;
         return count;
     }
     public double AvgMonth(){
-        List list=new ArrayList();
-        list.add(1);
-        list.add(12);
-        list.add(11);
-        list.add(10);
-        list.add(4);
+        int [] list = new int[5];
+        list[0] = 1;
+        list[1] = 12;
+        list[2] = 11;
+        list[3] = 10;
+        list[4] = 4;
         double count = 0;
-        for (int i = 1; i <= list.size(); i++){
-            count += list.indexOf(i);
+        for (int i = 0; i <= list.length-1; i++){
+            count += list[i];
         }
-        count = count/list.size();
+        count = count/list.length;
         return count;
     }
 }
