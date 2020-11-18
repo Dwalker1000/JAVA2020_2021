@@ -5,7 +5,7 @@ public class TestinArrays {
     //cannot mix data types
     public static void main (String []args){
         int num = 20;
-        int [] numbers = new int[10];
+        int [] numbers = new int[num/2];
         int sum = 0;
         for (int i=0; i< numbers.length; i++){
             numbers [i] = i*2;
