@@ -62,11 +62,10 @@ public class Movie {
     public String[] getPG(){
         String[] MovieName = {"Jaws", "Infinity war", "The Croods", "The Grinch", "Iron Man"};
         String[] MovieRating = {"PG", "PG-13", "PG", "PG", "PG-13"};
-        String[] PgRating = new String [MovieRating.length-1];
+        String[] PgRating = new String [MovieRating.length-2];
         int y = 0;
         for (int i = 0; i<= MovieRating.length-1; i++){
-            String x = MovieRating[i];
-            if (x == "PG"){
+            if (MovieRating[i] == "PG"){
                 PgRating [y]= MovieName[i];
                 y+=1;
             }
@@ -78,6 +77,7 @@ public class Movie {
         studio = "Eon Productions";
         rating = "PG-13";
         Length = 107;
+        Casino = new Movie(title,studio,rating,Length);
     }
     public String compareTime(Movie second){
         int dif = Length-second.Length;
