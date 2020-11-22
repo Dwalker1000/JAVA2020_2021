@@ -56,7 +56,7 @@ public class Movie {
     }
     //to string
     public String toString(){
-        String string = "the title is: " + title + "\nit last: "+ Length +"\nthe studio is: " + studio + "\nit was rated: " + rating;
+        String string = "the title is: " + title + "\nit last: "+ Length +" minutes\nthe studio is: " + studio + "\nit was rated: " + rating;
         return string;
     }
     public String[] getPG(){
@@ -79,17 +79,16 @@ public class Movie {
         Length = 107;
         Casino = new Movie(title,studio,rating,Length);
     }
-    public String compareTime(Movie second){
-        int dif = Length-second.Length;
+    public String compareTime(){
+        int dif = Length-107;
         String output = "";
         if (dif <= 0){
             dif = Math.abs(dif);
             output = "the second movie is " + dif + " minutes longer than the first movie";
         }
-        if (dif >= 0){
+        if (dif > 0){
             output = "the first movie is " + dif + " minutes longer than the second movie";
         }
         return output;
     }
-
 }

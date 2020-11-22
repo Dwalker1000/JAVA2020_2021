@@ -5,9 +5,9 @@ public class Holiday {
     private int Day;
     private String Month;
     public Holiday(){
-        Name = "New Year";
-        Day = 1;
-        Month = "January";
+//        Name = "New Year";
+//        Day = 1;
+//        Month = "January";
     }
     public Holiday(String NameIn, int DayIn, String MonthIn){
         Name = NameIn;
@@ -50,7 +50,7 @@ public class Holiday {
     public boolean inSameMonth(Holiday second){
         return second.Month == Month;
     }
-    public double AvgDate(){
+    public double AvgDay(){
         int [] list = new int[5];
         list[0] = 25;
         list[1] = 26;

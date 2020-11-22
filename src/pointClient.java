@@ -18,5 +18,6 @@ public class pointClient {
     // print the points again
     System.out.println("p1 is " + p1);
     System.out.println("p2 is " + p2);
+    point Point = new point();
     }
 }
