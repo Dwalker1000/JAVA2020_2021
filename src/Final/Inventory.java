@@ -11,48 +11,60 @@ public class Inventory {
         Location = "none";
         Current = 0;
         Last = 0;
-        total = Current+Last;
-        if (Last == 0){
-            change = 0;
-        }
-        else {
-            change = ((Current / Last)) * 100;
-        }
+        total = 0;
+        change = 0;
     }
     public Inventory (String in0, int in1, int in2){
         Location = in0;
         Current = in1;
         Last = in2;
-        total = in1+in2;
-        change = (in1 / in2) * 100;
+        total = this.Current+this.Last;
+        change = (this.Current / this.Last) * 100;
+        SetInventory(in0,in1,in2);
     }
     //get methods
     //location
-    public String getLocation() {return Location;}
-    //current total stock
-    public int getCurrent() {return Current;}
-    //last years stock
-    public int getLast() {return Last;}
-    //total stock this and last
-    public int getTotal() {return total;}
-    //change in stock
-    public String getChange() {return change + "%";}
+    public String getLocation() {return this.Location;}
+    //current total Inventory
+    public int getCurrent() {return this.Current;}
+    //last years Inventory
+    public int getLast() {return this.Last;}
+    //total Inventory this and last
+    public int getTotal() {return this.Current + this.Last;}
+    //change in Inventory
+    public int getChange() {
+        int x;
+        if (Last == 0){
+            x = 0;
+        }
+        else{
+            x = (Current / Last)*100;
+        }
+        return x;
+    }
 
     //change methods
     //location
-    public String ChangeLocation(String in) { return Location = in;}
+    public String ChangeLocation(String in) { return this.Location = in;}
     //current
-    public int ChangeCurrent(int in) {return Current = in;}
+    public int ChangeCurrent(int in) {return this.Current = in;}
     //previous year
-    public int ChangeLast(int in) {return Last = in;}
+    public int ChangeLast(int in) {return this.Last = in;}
 
-    //more stock
-    public int addCurrent (int in) {return Current += in;}
-    public int subtractCurrent (int in) {return Current -= in;}
+    //more Inventory
+    public int addCurrent (int in) {return this.Current += in;}
+    public int subtractCurrent (int in) {return this.Current -= in;}
 
     //to string
     public String toString (){
-        String out = "Location: " + Location + "\nCurrent Inventory: " + Current + "\nLast years inventory: " + Last + "\ntotal inventory: " + total + "\nDifference: " + change;
-        return out;
+        return "Location: " + this.Location + "\nCurrent Inventory: " + this.Current + "\nLast years inventory: " + this.Last + "\ntotal inventory: " + this.total + "\nDifference: " + this.change + "%";
+    }
+    //set
+    public void SetInventory(String in0, int in1, int in2){
+        this.Location = in0;
+        this.Current = in1;
+        this.Last = in2;
+        this.total = this.Current+this.Last;
+        this.change = (this.Current / this.Last) * 100;
     }
 }
