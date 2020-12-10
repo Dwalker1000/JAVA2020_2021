@@ -15,12 +15,19 @@ public class Inventory {
         change = 0;
     }
     public Inventory (String in0, int in1, int in2){
-        Location = in0;
-        Current = in1;
-        Last = in2;
-        total = this.Current+this.Last;
-        change = (this.Current / this.Last) * 100;
-        SetInventory(in0,in1,in2);
+        this.Location = in0;
+        this.Current = in1;
+        this.Last = in2;
+        this.total = this.Current+this.Last;
+        if (this.Last == 0){
+            this.change = 0;
+        }
+        else if(this.Last > this.Current){
+            this.change = ((this.Last - this.Current)/this.Last)*100;
+        }
+        else{
+            this.change = ((this.Current - this.Last)/this.Last)*100;
+        }
     }
     //get methods
     //location
@@ -37,8 +44,11 @@ public class Inventory {
         if (Last == 0){
             x = 0;
         }
+        else if (Last > Current){
+            x = ((Last - Current)/Last)*100;
+        }
         else{
-            x = (Current / Last)*100;
+            x = ((Current - Last)/Last)*100;
         }
         return x;
     }
@@ -58,13 +68,5 @@ public class Inventory {
     //to string
     public String toString (){
         return "Location: " + this.Location + "\nCurrent Inventory: " + this.Current + "\nLast years inventory: " + this.Last + "\ntotal inventory: " + this.total + "\nDifference: " + this.change + "%";
-    }
-    //set
-    public void SetInventory(String in0, int in1, int in2){
-        this.Location = in0;
-        this.Current = in1;
-        this.Last = in2;
-        this.total = this.Current+this.Last;
-        this.change = (this.Current / this.Last) * 100;
     }
 }
