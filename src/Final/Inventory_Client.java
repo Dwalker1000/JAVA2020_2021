@@ -63,7 +63,7 @@ public class Inventory_Client {
                     break;
                 case 5:
                     //get the total:  total = current inventory + last inventory
-                    System.out.println("the total inventory from both is: " + current.getTotal());
+                    System.out.println("the total inventory from this year and last year is: " + current.getTotal());
                     break;
                 case 6:
                     //gets the difference between the previous year and the current years inventory
