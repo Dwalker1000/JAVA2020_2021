@@ -121,8 +121,7 @@ public class Inventory_Client {
                 System.out.print(name.getLocation());
                 System.out.println();
             }
-            int access = scan.nextInt();
-            Current_Location = access;
+            Current_Location = scan.nextInt();
         }
         //prints location
         else{
