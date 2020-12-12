@@ -4,20 +4,17 @@ public class Inventory {
     private String Location;
     private int Current;
     private int Last;
-    private int total;
     //default
     public Inventory (){
         Location = "none";
         Current = 0;
         Last = 0;
-        total = 0;
     }
-    //input new obkect
+    //input new object
     public Inventory (String in0, int in1, int in2){
         this.Location = in0;
         this.Current = in1;
         this.Last = in2;
-        this.total = this.Current+this.Last;
     }
     //get methods
     //location
@@ -28,13 +25,13 @@ public class Inventory {
     public int getLast() {return this.Last;}
     //total Inventory this and last
     public int getTotal() {return this.Current + this.Last;}
-    //difrence between this years inventory and last years
+    //difference between this years inventory and last years
     public double getChange() {
-        if (Last == 0){
+        if (this.Last == 0){
             return 0;
         }
         else {
-            return ((double)(Current - Last) / Last) * 100;
+            return ((double)(this.Current - this.Last) / this.Last) * 100;
         }
     }
 

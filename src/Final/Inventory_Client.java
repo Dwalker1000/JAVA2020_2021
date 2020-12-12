@@ -54,7 +54,7 @@ public class Inventory_Client {
                     current = inventory_Array[Current_Location];
                     break;
                 case 3:
-                    //settings fro the current inventory
+                    //settings for the current inventory
                     CurrentInventory(scan, current);
                     break;
                 case 4:
