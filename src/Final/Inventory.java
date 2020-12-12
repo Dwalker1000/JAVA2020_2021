@@ -5,29 +5,19 @@ public class Inventory {
     private int Current;
     private int Last;
     private int total;
-    private int change;
-
+    //default
     public Inventory (){
         Location = "none";
         Current = 0;
         Last = 0;
         total = 0;
-        change = 0;
     }
+    //input new obkect
     public Inventory (String in0, int in1, int in2){
         this.Location = in0;
         this.Current = in1;
         this.Last = in2;
         this.total = this.Current+this.Last;
-        if (this.Last == 0){
-            this.change = 0;
-        }
-        else if(this.Last > this.Current){
-            this.change = ((this.Last - this.Current)/this.Last)*100;
-        }
-        else{
-            this.change = ((this.Current - this.Last)/this.Last)*100;
-        }
     }
     //get methods
     //location
@@ -38,19 +28,14 @@ public class Inventory {
     public int getLast() {return this.Last;}
     //total Inventory this and last
     public int getTotal() {return this.Current + this.Last;}
-    //change in Inventory
-    public int getChange() {
-        int x;
+    //difrence between this years inventory and last years
+    public double getChange() {
         if (Last == 0){
-            x = 0;
+            return 0;
         }
-        else if (Last > Current){
-            x = ((Last - Current)/Last)*100;
+        else {
+            return ((double)(Current - Last) / Last) * 100;
         }
-        else{
-            x = ((Current - Last)/Last)*100;
-        }
-        return x;
     }
 
     //change methods
@@ -67,6 +52,9 @@ public class Inventory {
 
     //to string
     public String toString (){
-        return "Location: " + this.Location + "\nCurrent Inventory: " + this.Current + "\nLast years inventory: " + this.Last + "\ntotal inventory: " + this.total + "\nDifference: " + this.change + "%";
+        return "Location: " + this.getLocation() + "\nCurrent Inventory: " + this.getCurrent() + "\nLast years inventory: " + this.getLast() + "\ntotal inventory: " + this.getTotal() + "\nDifference: " + this.getChange() + "%";
+    }
+    public String toString2 (){
+        return "Location: " + this.getLocation() + "\t\tCurrent Inventory: " + this.getCurrent() + "\t\tLast years inventory: " + this.getLast() + "\t\ttotal inventory: " + this.getTotal() + "\t\tDifference: " + this.getChange() + "%";
     }
 }

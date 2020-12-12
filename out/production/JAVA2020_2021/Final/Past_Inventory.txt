@@ -1,0 +1,3 @@
+Dallas 10 5
+LA 7 10
+Texas 12 4
