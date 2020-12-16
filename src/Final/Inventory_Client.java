@@ -1,5 +1,10 @@
 package Final;
-
+/*
+Daniel Walker
+this program allows the user to create new inventories for the person to use
+it allows the user to change the name current inventory and last years inventory
+you can also switch between locations by changing were in the array you are
+ */
 import java.io.*;
 import java.util.*;
 public class Inventory_Client {
@@ -88,6 +93,7 @@ public class Inventory_Client {
             }
         }while (Rep == "yes");
     }
+    //creates new inventory
     public static void NewInventory(Scanner scan){
         //gets data from person
         System.out.println("where is the warehouse located");
@@ -101,7 +107,7 @@ public class Inventory_Client {
         inventory = new Inventory(Location, CurrentYear, LastYear);
         inventory_Array[Length] = inventory;
     }
-
+    //diffrent setting for your location
     public static void Location(Scanner scan,Inventory current){
         //Different location settings
         System.out.println("1. change name of current location \n2. change witch location you want to edit \n3. see current inventories name");
@@ -128,7 +134,7 @@ public class Inventory_Client {
             System.out.println(current.getLocation());
         }
     }
-
+    //settings for your current inventory
     public static void CurrentInventory (Scanner scan, Inventory current){
         System.out.println("1. change current inventory \n2. add inventory to current inventory \n3. remove inventory from current inventory \n4. see how much inventory is in current inventory");
         int answer = scan.nextInt();
@@ -155,7 +161,7 @@ public class Inventory_Client {
             System.out.println(current.getCurrent());
         }
     }
-
+    //settings for last years inventory
     public static void PastInventory(Scanner scan, Inventory current){
         System.out.println("1. change last years inventory \n2. see last years inventory");
         int answer = scan.nextInt();
@@ -170,7 +176,7 @@ public class Inventory_Client {
             System.out.println(current.getLast());
         }
     }
-
+    //settings to store data run when closed
     public static void StoreData()throws FileNotFoundException {
         //stores data
         //opens file
@@ -193,6 +199,7 @@ public class Inventory_Client {
             }
         }
     }
+    //adds whats in the file to the array of objects
     public static void FileArrayAdd () throws FileNotFoundException {
         //gets file contents
         Scanner input = new Scanner(new File("C:\\Users\\walkerd24\\IdeaProjects\\JAVA2020_2021\\src\\Final\\Past_Inventory.txt"));
@@ -212,6 +219,7 @@ public class Inventory_Client {
             inventory_Array[Length] = inventory;
         }
     }
+    //prints everything in the array and its data
     public static void totalData(){
         //prints all data from the array
         for (int i = 0; i<= count; i++){
