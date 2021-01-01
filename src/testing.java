@@ -1,14 +1,11 @@
-import Final.Inventory;
+import java.util.*;
 
 public class testing {
-    public static void main(String[] args) {
-        String [] inventory_Array = {"hi", "no", "good", "bad"};
-        for (int i = 0; i<= inventory_Array.length-1; i++){
-            System.out.println();
-            System.out.print(i + ". ");
-            String name = inventory_Array[i];
-            System.out.print(name);
-
+    public static void main(String[] args){
+        Random random = new Random();
+        for (int i =0; i<=100; i++) {
+            int rad = random.nextInt(2);
+            System.out.println(rad);
         }
     }
 }
