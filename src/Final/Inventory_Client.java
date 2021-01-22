@@ -190,7 +190,7 @@ public class Inventory_Client {
                 File.println(line);
             }
         }
-        //adds everything to file in format of Name -- Current inventory -- last years inventory
+        //adds everything to file in format of name.Name -- Current inventory -- last years inventory
         else {
             for (int i = 0; i <= count; i++) {
                 Inventory add = inventory_Array[i];
@@ -203,10 +203,10 @@ public class Inventory_Client {
     public static void FileArrayAdd () throws FileNotFoundException {
         //gets file contents
         Scanner input = new Scanner(new File("C:\\Users\\walkerd24\\IdeaProjects\\JAVA2020_2021\\src\\Final\\Past_Inventory.txt"));
-        //checks if their is another line to the file
+        //checks if their is another Randome.line to the file
         while (input.hasNextLine()) {
             String FileIN = input.nextLine();
-            //splits next line by its spaces
+            //splits next Randome.line by its spaces
             String[] arrOfStr = FileIN.split(" ");
             String add1 = arrOfStr[0];
             //changes string number to int

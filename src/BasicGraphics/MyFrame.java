@@ -30,7 +30,7 @@ public class MyFrame extends JFrame implements ActionListener {
         textField.setForeground(Color.yellow);
         //background color
         textField.setBackground(Color.BLACK);
-        //carrot line at end of input text
+        //carrot Randome.line at end of input text
         textField.setCaretColor(Color.yellow);
         //text already in the box
         textField.setText("username");

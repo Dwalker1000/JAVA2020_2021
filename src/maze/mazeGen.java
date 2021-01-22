@@ -7,7 +7,7 @@ public class mazeGen {
         Random random = new Random();
         //finds start
         int start = random.nextInt(Size-2)+2;
-        //first line
+        //first Randome.line
         first(start);
         String [] layer2 = new String[15];
         second(start, random, layer2);
@@ -42,8 +42,8 @@ public class mazeGen {
 
     public static void first(int start){
         int end = Size-start;
-        //first line
-        //spaces before the start point
+        //first Randome.line
+        //spaces before the start point.point
         for (int i = 0; i<start-1; i++){
             System.out.print("*");
         }
