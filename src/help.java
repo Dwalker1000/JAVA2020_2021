@@ -22,5 +22,9 @@ public class help {
             }
             System.out.println();
         }
+        int length = 1000000000;
+        for (int i = 1; i <= length; i++){
+            System.out.println("doge");
+        }
     }
 }
